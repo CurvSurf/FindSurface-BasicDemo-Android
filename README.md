@@ -9,7 +9,7 @@
 
 This sample source code demonstrates the basic usage of FindSurface for a simple task, which attempts to search for specific geometry shapes in point cloud data. 
 
-[FindSurfaceFramework] is required to build the source code into a program. Download the framework [here] and refer to [here] for an instruction about how to setup your project with the source code to build it.
+[FindSurfaceFramework](https://github.com/CurvSurf/FindSurface-Android) is required to build the source code into a program. Download the framework [here](https://github.com/CurvSurf/FindSurface-Android/releases/).
 
 
 
@@ -17,7 +17,7 @@ This sample source code demonstrates the basic usage of FindSurface for a simple
 
 ----
 
-Look around  `runFindSurfaceDemo` function of FindSurfaceDemo.swift file first, where FindSurface APIs are called.  The logic in the function consists of the following 4 steps:
+Look around  `FindSurfaceDemo.runDemo` function of [FindSurfaceDemo.kt](src/FindSurfaceDemo.kt) file first, where FindSurface APIs are called.  The logic in the function consists of the following 4 steps:
 
 ### Obtaining FindSurface Context
 
@@ -126,7 +126,7 @@ The  `FindSurfaceResult` instance resulted from `FindSurface.findSurface` contai
 
 >  Note: In this sample code, a wrapper class with a simple vector type is introduced as an example, because of the lack of a structure like C's union and the other reason, which is mentioned below. It is recommended to define your own wrapper and vector types that is appropriate for your application domain.
 
-The `type` property has a value of `FeatureType` and can be one of the five types. The type will be the same as the input parameter, except for several special cases (refer to [Auto Detection] and [Smart Conversion]). Since the result type cannot be set to `any`, the `default` section will never be executed. 
+The `type` property has a value of `FeatureType` and can be one of the five types. The type will be the same as the input parameter, except for several special cases (refer to [Auto Detection](TBD) and [Smart Conversion](TBD)). Since the result type cannot be set to `any`, the `default` section will never be executed. 
 
 The `rmsError` property describes the root-mean-square value of errors in orthogonal distance, which means distances in normal direction between inlier points and the surface model that FindSurface detects. The value describes how much of the points fits the geometric model well and it is not related to the algorithm's accuracy. This value will get greater as the points have greater errors in measurement, which means the result also be affected by the errors.
 
@@ -138,5 +138,5 @@ The `param` property is a `FloatBuffer` containing the sizes and locations of th
 
 --------------------
 
-The point cloud in this demo is the same as the sample used in FindSurface WebDemo. Please refer to the [WebDemo] for a visual representation of FindSurface's results. 
+The point cloud in this demo is the same as the sample used in FindSurface WebDemo. Please refer to the [WebDemo](https://developers.curvsurf.com/WebDemo/) for a visual representation of FindSurface's results. 
 
