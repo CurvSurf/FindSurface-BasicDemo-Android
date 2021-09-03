@@ -5,8 +5,6 @@
 
 ## Overview
 
-----
-
 This sample source code demonstrates the basic usage of FindSurface for a simple task, which attempts to search for specific geometry shapes in point cloud data. 
 
 [FindSurfaceFramework](https://github.com/CurvSurf/FindSurface-Android) is required to build the source code into a program. Download the framework [here](https://github.com/CurvSurf/FindSurface-Android/releases/).
@@ -14,8 +12,6 @@ This sample source code demonstrates the basic usage of FindSurface for a simple
 
 
 ## About the source code
-
-----
 
 Look around  `FindSurfaceDemo.runDemo` function of [FindSurfaceDemo.kt](src/FindSurfaceDemo.kt) file first, where FindSurface APIs are called.  The logic in the function consists of the following 4 steps:
 
@@ -135,8 +131,6 @@ The `param` property is a `FloatBuffer` containing the sizes and locations of th
 
 
 ## About point cloud
-
---------------------
 
 The point cloud in this demo is the same as the sample used in FindSurface WebDemo. Please refer to the [WebDemo](https://developers.curvsurf.com/WebDemo/) for a visual representation of FindSurface's results. 
 
