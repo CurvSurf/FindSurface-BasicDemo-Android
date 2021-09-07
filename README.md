@@ -41,7 +41,7 @@ fsCtx.setPointCloudData(pointBuffer,
                         false)
 ````
 
-When an application is ready for an input point cloud, pass it to FindSurface along with parameters related to the points. Refer to [here] for the meanings of the parameters.
+When an application is ready for an input point cloud, pass it to FindSurface along with parameters related to the points. Refer to [here](https://github.com/CurvSurf/FindSurface#how-does-it-work) for the meanings of the parameters.
 
 > Note: The input buffer must be allocated through  `ByteBuffer.allocateDirect` method and the byte order must be set to  `ByteOrder.nativeOrder()`. 
 
@@ -71,11 +71,11 @@ for (preset in normalPresets) {
 }
 ````
 
-The parameters of  `findSurface` method are composed of `featureType`, `seedIndex`, `seedRadius` and `requestInlierFlags`. The `featureType` is an enum value of `FindSurface.FeatureType`, which can be one of the five geometric shapes (i.e., `plane`, `sphere`, `cylinder`, `cone`, `torus`) and `any`, which means "try finding one of the five". Refer to [here] for the detailed descriptions of the parameters.
+The parameters of  `findSurface` method are composed of `featureType`, `seedIndex`, `seedRadius` and `requestInlierFlags`. The `featureType` is an enum value of `FindSurface.FeatureType`, which can be one of the five geometric shapes (i.e., `plane`, `sphere`, `cylinder`, `cone`, `torus`) and `any`, which means "try finding one of the five". Refer to [here](https://github.com/CurvSurf/FindSurface#how-does-it-work) for the detailed descriptions of the parameters.
 
 This method returns a result of an nullable abstract type, which is also named `FindSurfaceResult` that every geometric surface types inherits. If the method fails to detect any geometric shape, the method returns `null`.
 
-FindSurface throws an `Exception` if it fails to execute its algorithm for any reason (e.g., an invalid parameter value, lack of memory). The possible types that the  `Exception`  represents include `InvalidArgumentException` and `InvalidOperationException`, which indicates some parameters are missing or input point cloud is not set. It is recommended to design your application defensively so that your application does not have to catch any exception. Refer to [here] for the cases of when FindSurface throws an `Exception`.
+FindSurface throws an `Exception` if it fails to execute its algorithm for any reason (e.g., an invalid parameter value, lack of memory). The possible types that the  `Exception`  represents include `InvalidArgumentException` and `InvalidOperationException`, which indicates some parameters are missing or input point cloud is not set. It is recommended to design your application defensively so that your application does not have to catch any exception. Refer to [here](TBD) for the cases of when FindSurface throws an `Exception`.
 
 ### Fetching the Result
 
@@ -124,7 +124,7 @@ The  `FindSurfaceResult` instance resulted from `FindSurface.findSurface` contai
 
 The `type` property has a value of `FeatureType` and can be one of the five types. The type will be the same as the input parameter, except for several special cases (refer to [Auto Detection](TBD) and [Smart Conversion](TBD)). Since the result type cannot be set to `any`, the `default` section will never be executed. 
 
-The `rmsError` property describes the root-mean-square value of errors in orthogonal distance, which means distances in normal direction between inlier points and the surface model that FindSurface detects. The value describes how much of the points fits the geometric model well and it is not related to the algorithm's accuracy. This value will get greater as the points have greater errors in measurement, which means the result also be affected by the errors.
+The `rmsError` property describes the root-mean-squared value of errors in orthogonal distance, which means distances in normal direction between inlier points and the surface model that FindSurface detects. The value describes how much the points fits the geometric model well and it is not related to the algorithm's accuracy. This value will get greater as the points have greater errors in measurement, which means the result also be affected by the errors.
 
 The `param` property is a `FloatBuffer` containing the sizes and locations of the geometry found. Since we couldn't choose appropriate vector types used commonly in Android Java/Kotlin for general purposed usage, we decided to expose the information in a form of `FloatBuffer` and provide index constants so that you can read the values at pre-defined positions.
 
