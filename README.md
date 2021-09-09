@@ -122,7 +122,7 @@ The  `FindSurfaceResult` instance resulted from `FindSurface.findSurface` contai
 
 >  Note: In this sample code, a wrapper class with a simple vector type is introduced as an example, because of the lack of a structure like C's union and the other reason, which is mentioned below. It is recommended to define your own wrapper and vector types that is appropriate for your application domain.
 
-The `type` property has a value of `FeatureType` and can be one of the five types. The type will be the same as the input parameter, except for several special cases (refer to [Auto Detection](TBD) and [Smart Conversion](TBD)). Since the result type cannot be set to `any`, the `default` section will never be executed. 
+The `type` property has a value of `FeatureType` and can be one of the five types. The type will be the same as the input parameter, except for several special cases (refer to [Auto Detection](https://github.com/CurvSurf/FindSurface#auto-detection) and [Smart Conversion](https://github.com/CurvSurf/FindSurface#smart-conversion)). Since the result type cannot be set to `any`, the `default` section will never be executed. 
 
 The `rmsError` property describes the root-mean-squared value of errors in orthogonal distance, which means distances in normal direction between inlier points and the surface model that FindSurface detects. The value describes how much the points fits the geometric model well and it is not related to the algorithm's accuracy. This value will get greater as the points have greater errors in measurement, which means the result also be affected by the errors.
 
