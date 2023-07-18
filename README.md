@@ -7,7 +7,9 @@
 
 This sample source code demonstrates the basic usage of FindSurface for a simple task, which attempts to search for specific geometry shapes in point cloud data. 
 
-[FindSurface library](https://github.com/CurvSurf/FindSurface-Android) is required to build the source code into a program. Download the library [here](https://github.com/CurvSurf/FindSurface-Android/releases/).
+**NOTE:** The repositories listed below are presently inaccessible due to internal complications. If you have any inquiries or require further assistance in relation to this matter, please contact to support@curvsurf.com. We greatly appreciate your patience and understanding during this period.
+
+[FindSurface library (unavailable)](https://github.com/CurvSurf/FindSurface-Android) is required to build the source code into a program. Download the library [here (unavailable)](https://github.com/CurvSurf/FindSurface-Android/releases/).
 
 
 
